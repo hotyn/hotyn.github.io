@@ -8,14 +8,38 @@ body {
   margin: 0;
   background-color: bisque;
 }
+header {
+  height: 100vh;
+  padding: 0 20px;
+  background-image: url("https://opencages.com.ua/_nuxt/img/homepage.0151b74.jpg.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
+  background-attachment: fixed;
 
-.header {
+  position: relative;
+}
+header::after {
+  background: #0c3632;
+  content: "";
+  height: 100%;
+  left: 0;
+  opacity: 0.75;
+  position: absolute;
+  top: 0;
+  transition: all 0.25s ease;
+  width: 100%;
+}
+nav {
+  position: relative;
+  z-index: 1;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 50px;
-  background-color: black;
+  /* padding: 10px 50px; */
+  height: 50px;
 }
+
 .logo a {
   display: flex;
   height: 100%;
@@ -40,6 +64,33 @@ a {
   font-size: 14px;
   padding: 0 10px;
 }
+.nav-list li:last-of-type {
+  padding-right: 0;
+}
+.navLIST-link {
+  position: relative;
+  transition: all 0.25s ease;
+}
+.navLIST-link::after {
+  /* підкреслення лінка меню */
+  background: #17baaa;
+  bottom: -8px;
+  content: "";
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transform: scaleX(0);
+  transition: all 0.25s ease;
+  width: 100%;
+}
+.navLIST-link:hover {
+  color: #17baaa;
+}
+
+.navLIST-link:hover::after {
+  /* ховер для псевдоелемента афтер */
+  transform: scaleX(1);
+}
 
 .nav-list li:last-of-type a {
   display: flex;
@@ -56,4 +107,30 @@ a {
 .nav-list li:last-of-type a:hover {
   background-color: #c9233a;
   transition: all 0.25s ease;
+}
+/*  end header*/
+.first-screen {
+  position: absolute;
+top: 3rem;
+
+  box-sizing: border-box;
+  margin: auto;
+  max-width: 1280px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+}
+h1 {
+  top: 3rem;
+  color: white;
+  font-size: 56px;
+}
+.first-screen span {
+  color: #17baaa;
+}
+.first-screen a {
+  margin: 40px 0;
+  background: #17baaa;
+  color: #fff;
+  padding: 10px 30px;
 }
