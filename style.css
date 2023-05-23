@@ -111,7 +111,7 @@ a {
 /*  end header*/
 .first-screen {
   position: absolute;
-top: 3rem;
+  top: 3rem;
 
   box-sizing: border-box;
   margin: auto;
@@ -124,6 +124,7 @@ h1 {
   top: 3rem;
   color: white;
   font-size: 56px;
+  width: 90%;
 }
 .first-screen span {
   color: #17baaa;
@@ -134,3 +135,23 @@ h1 {
   color: #fff;
   padding: 10px 30px;
 }
+
+@media screen and (max-width: 992px) {
+      
+.nav-list {
+  display: none;
+}
+  .svg-inline--fa {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    vertical-align: -.125em;
+    cursor: pointer;
+}
+
+.nav-toggle {
+  font-size: 2rem;
+  color: white;
+}
+}
+ 
